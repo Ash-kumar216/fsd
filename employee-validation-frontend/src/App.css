@@ -1,0 +1,123 @@
+/* Updated Flexbox for the Entire Form */
+.form-container {
+  background-color: rgb(18, 130, 177);
+  max-width: 500px; /* Slightly wider */
+  margin: 50px auto; /* Centered */
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: calc(); /* Center align content */
+  font-family: 'Arial', sans-serif;
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+  font-size: 2rem;
+}
+
+/* Input Fields */
+form div {
+  width: 85%; /* Make fields align with the container */
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #000306;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: #2980b9;
+  outline: none;
+  box-shadow: 0 0 8px rgba(41, 128, 185, 0.5);
+}
+
+/* Button Flexbox Container */
+.button-container {
+  width: 100%; /* Matches form width */
+  display: flex;
+  justify-content: space-between; /* Place buttons side by side */
+  gap: 15px; /* Small gap between buttons */
+}
+
+button {
+  flex: 1; /* Equal width for buttons */
+  padding: 12px;
+  background-color: #3498db; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #2980b9; /* Darker shade for hover */
+  transform: scale(1.02); /* Slight scaling effect */
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Error and Success Messages */
+.error {
+  color: #e74c3c;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.success {
+  color: #27ae60;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .form-container {
+    padding: 20px;
+    box-shadow: none;
+    border: none;
+  }
+
+  .form-container h2 {
+    font-size: 1.6rem;
+  }
+
+  input,
+  select {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+}
