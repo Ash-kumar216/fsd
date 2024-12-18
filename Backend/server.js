@@ -46,7 +46,7 @@ app.post('/add-employee', (req, res) => {
     });
 });
 
-const PORT = 5000;
+const PORT = 5002;
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
