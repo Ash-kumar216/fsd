@@ -62,7 +62,7 @@ const App = () => {
 
         setError('');
         try {
-            const response = await axios.post('https://fsd-backend-tmk0.onrender.com/add-employee', formData);
+            const response = await axios.post('https://fsd-1qbd.onrender.com/add-employee', formData);
             setMessage(response.data);
             setFormData({
                 name: '',
